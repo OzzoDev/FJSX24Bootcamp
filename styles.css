@@ -59,12 +59,6 @@ nav {
   color: rgb(180, 178, 178);
   border-bottom: 1px solid rgb(180, 178, 178);
 }
-
-main {
-  width: 100%;
-  height: 3230px;
-}
-
 .welcome {
   margin-top: 40px;
   padding: 20px;
@@ -111,7 +105,22 @@ main {
   font-weight: 600;
 }
 
+.images {
+  top: 40px;
+  position: relative;
+  width: 100%;
+  outline: 1px solid white;
+  outline-offset: -10px;
+}
+
+.images img {
+  display: block;
+  width: 100%;
+  /* object-fit: contain; */
+}
+
 .matches {
+  /* position: relative; */
   padding: 10px;
 }
 
@@ -129,6 +138,7 @@ main {
   width: 288px;
   margin: auto;
   height: 316px;
+  z-index: 1;
   margin-bottom: 80px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px 6px rgba(242, 237, 242, 0.5);
@@ -250,6 +260,40 @@ footer::before {
   .nav-list-item:nth-child(n + 2) .nav-link {
     margin-left: 30px;
   }
+
+  .welcome article {
+    max-width: 90%;
+  }
+
+  .images {
+    position: relative;
+    margin: auto;
+    width: min(100%, 1100px);
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  #image1 {
+    position: absolute;
+    left: 0;
+    width: 51%;
+  }
+
+  #image2 {
+    position: absolute;
+    right: 0;
+    width: 51%;
+  }
+
+  .images img {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin-left: -4px;
+  }
+  .matches {
+    position: relative;
+  }
   .footer-links {
     max-width: 70%;
     margin: auto;
@@ -261,74 +305,56 @@ footer::before {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  main {
-    height: 1720px;
-  }
   .welcome article {
     max-width: 80%;
   }
-  .matches {
-    position: relative;
-  }
-  .match {
-    position: absolute;
-  }
   #match1 {
-    left: 7%;
-    top: 130px;
+    left: -25%;
+    top: 10px;
   }
   #match2 {
-    right: 7%;
-    top: 130px;
+    position: absolute;
+    right: 6%;
+    top: 139px;
   }
   #match3 {
-    left: 7%;
-    top: 510px;
+    left: -25%;
+    top: -10px;
   }
   #match4 {
-    right: 7%;
-    top: 510px;
+    position: absolute;
+    right: 6%;
+    top: 535px;
   }
   #match5 {
-    left: 50%;
-    transform: translate(-50%);
-    top: 890px;
+    top: -30px;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-  main {
-    height: 1300px;
-  }
   .welcome article {
     max-width: 90%;
   }
-  .matches {
-    position: relative;
-  }
-  .match {
-    position: absolute;
-  }
   #match1 {
-    left: 8%;
-    top: 130px;
+    left: -25%;
+    top: 10px;
   }
   #match2 {
-    right: 8%;
-    top: 130px;
+    position: absolute;
+    right: 6%;
+    top: 139px;
   }
   #match3 {
-    left: 50%;
-    transform: translate(-50%);
-    top: 130px;
+    left: -25%;
+    top: -10px;
   }
   #match4 {
-    right: 20%;
-    top: 550px;
+    position: absolute;
+    right: 6%;
+    top: 535px;
   }
   #match5 {
-    left: 20%;
-    top: 550px;
+    top: -30px;
   }
   .footer-links {
     text-align: center;
@@ -343,39 +369,61 @@ footer::before {
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1120px) and (max-width: 1599px) {
+  #match1 {
+    left: -32%;
+    top: 10px;
+  }
+  #match2 {
+    position: absolute;
+    right: 6%;
+    top: 139px;
+  }
+  #match3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 139px;
+  }
+  #match4 {
+    position: absolute;
+    right: 21%;
+    top: 535px;
+  }
+  #match5 {
+    left: -16%;
+    top: -10px;
+  }
+}
+
+@media (min-width: 1600px) {
   main {
-    height: 1300px;
+    margin-bottom: 80px;
   }
   .welcome article {
     max-width: 90%;
   }
-  .matches {
-    position: relative;
-  }
-  .match {
-    position: absolute;
-  }
   #match1 {
-    left: 8%;
-    top: 130px;
+    left: -36%;
+    top: 10px;
   }
   #match2 {
-    right: 8%;
-    top: 130px;
+    position: absolute;
+    right: 6%;
+    top: 139px;
   }
   #match3 {
-    left: 30%;
-    top: 130px;
+    position: absolute;
+    right: 30%;
+    top: 139px;
   }
   #match4 {
-    right: 30%;
-    top: 130px;
+    position: absolute;
+    left: 30%;
+    top: 139px;
   }
   #match5 {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 550px;
+    top: 50px;
   }
   .footer-links {
     margin: auto;
