@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   min-height: 100svh;
@@ -19,6 +23,7 @@ header {
   background: rgb(181, 13, 70);
   background: linear-gradient(90deg, rgba(181, 13, 70, 1) 0%, rgba(228, 61, 101, 1) 50%, rgba(177, 35, 0, 1) 100%);
   width: 100%;
+  height: 250px;
 }
 
 h1 {
@@ -27,6 +32,9 @@ h1 {
   letter-spacing: 1.4px;
   text-align: center;
   font-weight: 900;
+  margin: auto;
+  max-width: 240px;
+  word-break: break-all;
 }
 
 nav {
@@ -35,7 +43,7 @@ nav {
 }
 
 .nav-list-item {
-  display: inline-block;
+  display: block;
 }
 
 .nav-link {
@@ -47,17 +55,14 @@ nav {
 }
 
 .nav-link:hover {
+  transform: scale(1.13);
   color: rgb(180, 178, 178);
   border-bottom: 1px solid rgb(180, 178, 178);
 }
 
-.nav-list-item:nth-child(n + 2) .nav-link {
-  margin-left: 20px;
-}
-
 main {
   width: 100%;
-  height: 3200px;
+  height: 3230px;
 }
 
 .welcome {
@@ -112,6 +117,8 @@ main {
 
 .matches h2 {
   margin: 50px 0 30px 0;
+  padding-top: 10px;
+  border-top: 1px solid rgb(173, 173, 173);
 }
 
 .match {
@@ -121,7 +128,7 @@ main {
   height: fit-content;
   width: 288px;
   margin: auto;
-  height: 308px;
+  height: 316px;
   margin-bottom: 80px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px 6px rgba(242, 237, 242, 0.5);
@@ -140,8 +147,6 @@ main {
   padding: 10px 0 0 10px;
   vertical-align: top;
   border-radius: 6px;
-  /* border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px; */
   background: #455d7a;
 }
 
@@ -160,12 +165,19 @@ main {
   padding: 20px 10px;
 }
 
-.result div,
-.goals div {
+.result button,
+.goals button {
   display: inline-block;
   padding: 5px 20px;
   border-radius: 5px;
+  color: #e3e3e3;
   background: #455d7a;
+  transition: all 0.4s ease-in-out;
+}
+
+.result button:hover,
+.goals button:hover {
+  background-color: #57769b;
 }
 
 .bet-header {
@@ -181,7 +193,59 @@ main {
 
 footer {
   background-color: black;
-  padding: 40px;
+  padding: 40px 0;
+}
+
+.footer-links {
+  list-style-type: none;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #363535;
+  transition: all 0.3s ease-in-out;
+  padding-right: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #9e9a9a;
+  font-size: 1.1em;
+  margin-left: 10px;
+}
+
+.footer-links li:hover {
+  border-bottom: 1px solid #727070;
+}
+
+.footer-links li a:hover {
+  color: #d3cdcd;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 150px;
+  }
+
+  h1 {
+    max-width: 100%;
+    word-break: keep-all;
+  }
+  .nav-list-item {
+    display: inline-block;
+  }
+  .nav-list-item:nth-child(n + 2) .nav-link {
+    margin-left: 30px;
+  }
+  .footer-links {
+    max-width: 70%;
+    margin: auto;
+  }
+  .footer-links li {
+    display: inline-block;
+    margin: 5px 20px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -222,7 +286,7 @@ footer {
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   main {
-    height: 1230px;
+    height: 1300px;
   }
   .welcome article {
     max-width: 90%;
@@ -248,17 +312,28 @@ footer {
   }
   #match4 {
     right: 20%;
-    top: 510px;
+    top: 550px;
   }
   #match5 {
     left: 20%;
-    top: 510px;
+    top: 550px;
+  }
+  .footer-links {
+    text-align: center;
+    margin: auto;
+    max-width: 100%;
+  }
+  .footer-links li {
+    padding-right: 0;
+  }
+  .footer-links li a {
+    margin-left: 0;
   }
 }
 
 @media (min-width: 1441px) {
   main {
-    height: 1230px;
+    height: 1300px;
   }
   .welcome article {
     max-width: 90%;
@@ -288,6 +363,17 @@ footer {
   #match5 {
     left: 50%;
     transform: translateX(-50%);
-    top: 510px;
+    top: 550px;
+  }
+  .footer-links {
+    margin: auto;
+    text-align: center;
+    max-width: 100%;
+  }
+  .footer-links li {
+    padding-right: 0;
+  }
+  .footer-links li a {
+    margin-left: 0;
   }
 }
