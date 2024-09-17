@@ -1,0 +1,245 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100svh;
+  background-color: whitesmoke;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+
+.flag-white {
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag-red {
+  background-color: maroon;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.menu1 {
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 600px);
+  background-color: rgb(192, 192, 192);
+}
+.menu1 option {
+  font-size: 0.7em;
+  padding: 10px 50px;
+}
+
+.menu1 option:first-child {
+  background-color: grey;
+}
+
+.menu2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: min(100%, 100px);
+  padding: 10px;
+  font-size: 0.7em;
+  width: min(100%, 1000px);
+  background-color: rgb(192, 192, 192);
+}
+
+.menu2 h1 {
+  margin: 0;
+}
+
+.menu2 section {
+  display: flex;
+  column-gap: 20px;
+  font-size: 1.2em;
+}
+
+.menu3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: min(100%, 100px);
+  padding: 10px;
+  font-size: 0.7em;
+  width: min(100%, 1000px);
+  background-color: rgb(192, 192, 192);
+}
+
+.menu3 h1 {
+  margin: 0;
+}
+
+.menu3 section {
+  display: flex;
+  column-gap: 20px;
+  font-size: 1.2em;
+}
+
+.menu3 button {
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: "1px solid black";
+  background-color: transparent;
+}
+
+.fibonacci,
+.fibonacci-reverse {
+  display: flex;
+  width: min(100%, 1000px);
+  height: 50px;
+  background-image: linear-gradient(to right, #5b0000, #34b000);
+}
+
+.fibonacci-reverse {
+  flex-direction: row-reverse;
+  background-image: linear-gradient(to left, #5b0000, #34b000);
+}
+
+.box {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.fibonacci .box:nth-child(1) {
+  flex-grow: 1;
+}
+.fibonacci .box:nth-child(2) {
+  flex-grow: 1;
+}
+.fibonacci .box:nth-child(3) {
+  flex-grow: 2;
+}
+.fibonacci .box:nth-child(4) {
+  flex-grow: 3;
+}
+.fibonacci .box:nth-child(5) {
+  flex-grow: 5;
+}
+.fibonacci .box:nth-child(6) {
+  flex-grow: 8;
+}
+.fibonacci .box:nth-child(7) {
+  flex-grow: 13;
+}
+.fibonacci .box:nth-child(8) {
+  flex-grow: 21;
+}
+.fibonacci .box:nth-child(9) {
+  flex-grow: 34;
+}
+
+.quote-card {
+  width: 260px;
+  background-color: white;
+  padding: 90px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 150px;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote p:nth-child(n + 2) {
+  color: darkgray;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.buttons button:first-child {
+  background-color: rgb(87, 86, 86);
+}
+
+.buttons button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: darkgrey;
+  border: none;
+}
+
+.profile-card {
+  width: 260px;
+  background-color: white;
+  padding: 10px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profile-card button:first-child {
+  width: 20px;
+  height: 20px;
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+}
+
+.profile-card button:nth-child(n + 2) {
+  padding: 14px 25px;
+  border-radius: 25px;
+  font-size: 1.03em;
+  color: white;
+  background-color: rgb(65, 64, 64);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.profile h2 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: rgb(63, 62, 62);
+}
+
+.profile p {
+  margin: 10px 0;
+  font-weight: 200;
+  font-size: 0.9em;
+  color: rgb(148, 147, 147);
+}
+
+.profile img {
+  width: 120px;
+  clip-path: circle(45%);
+}
