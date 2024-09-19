@@ -3,81 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox</title>
+    <title>Tillgänglighet, Företag X</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>
+      <h1>Välkommen till Företag X</h1>
+    </header>
     <main>
-      <div class="flag-white">
-        <div class="flag-red"></div>
-      </div>
-      <div class="menu1">
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-        <option>Option 4</option>
-      </div>
-      <div class="menu2">
-        <h1>ZoCom</h1>
-        <section>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-          <option>Option 4</option>
-        </section>
-      </div>
-      <div class="menu3">
-        <h1>ZoCom</h1>
-        <section>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-          <option>Option 4</option>
-        </section>
-        <button>login</button>
-      </div>
-      <div class="fibonacci">
-        <div class="box">0</div>
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">5</div>
-        <div class="box">8</div>
-        <div class="box">13</div>
-        <div class="box">21</div>
-        <div class="box">34</div>
-      </div>
-      <div class="fibonacci fibonacci-reverse">
-        <div class="box">0</div>
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">5</div>
-        <div class="box">8</div>
-        <div class="box">13</div>
-        <div class="box">21</div>
-        <div class="box">34</div>
-      </div>
-      <div class="quote-card">
-        <section class="quote">
-            <p>"If debugging is the process of removing software bugs, then programming must be the process of putting them there"</p>
-            <p>Edsger Dijkstra</p>
-        </section>
-       <section class="buttons">
-            <button></button>
-            <button></button>
-            <button></button>
-       <section>
-      </div>
-      <div class="profile-card">
-        <button><img src="close.svg" alt=""/></button>
-        <section class="profile">
-            <img src="margeret.png" alt="margeret profile image"/>
-            <h2>Margaret Hamilton</h2>
-            <p>Kick Ass Coder</p>
-        </section>
-        <button>Omg, tell me more!</button>
-      </div>
+      <section>
+        <figure>
+          <img src="office.jpg" title="Företag X:s kontor" alt="Företag X:s kontor" aria-label="Företag X:s kontor"/>
+        <figcaption>
+          Företag X:s kontor
+        </figcaption>
+      </figure>
+          <a href="om.html" title="Läs mer om oss på Företag X" aria-label="Läs mer om oss Företag X">Läs mer om oss på Företag X</a>
+        </p>
+        <button onclick="subscribe()" title="Prenumerera på vårt nyhetsbrev" aria-label="Prenumerera på vårt nyhetsbrev">Prenumerera</button>
+      </section>
     </main>
   </body>
 </html>
